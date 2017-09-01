@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".SplashScreenActivity"
+    android:id="@+id/nicu_layout"
+    android:background="#E2E2E2"
+    >
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/clock"
+        android:src="@drawable/clock2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView10"
+        android:src="@drawable/listviewbackground"
+        android:layout_below="@+id/clock"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView11"
+        android:src="@drawable/sensor"
+        android:layout_below="@+id/clock"
+        android:layout_toStartOf="@+id/clock"
+        android:layout_marginTop="13dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/babyormotherImageView"
+        android:src="@drawable/babylogo"
+        android:layout_below="@+id/sensorBattery"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/babyTempImageView"
+        android:src="@drawable/temp1"
+        android:layout_below="@+id/imageView10"
+        android:layout_alignStart="@+id/disconnectimageButton" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/momtempimageView"
+        android:src="@drawable/temp7"
+        android:layout_above="@+id/babyTitleTV"
+        android:layout_alignEnd="@+id/disconnectimageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="BABY"
+        android:id="@+id/babyTitleTV"
+        android:layout_below="@+id/babyTempImageView"
+        android:layout_alignEnd="@+id/momTempTVdegC" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="MOTHER"
+        android:id="@+id/momorroomTitleTV"
+        android:layout_below="@+id/momtempimageView"
+        android:layout_toEndOf="@+id/babyormotherImageView" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/disconnectimageButton"
+        android:src="@drawable/deselectbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DISCONNECT"
+        android:id="@+id/disconnectTV"
+        android:layout_alignBottom="@+id/disconnectimageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\u2103"
+        android:id="@+id/babyTempTVdegC"
+        android:layout_marginBottom="15dp"
+        android:layout_alignBottom="@+id/momtempimageView"
+        android:layout_toEndOf="@+id/momTouchImageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="\u2103"
+        android:id="@+id/momTempTVdegC"
+        android:layout_alignTop="@+id/babyTempTV"
+        android:layout_toEndOf="@+id/babyTempTV" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/babyTouchImageView"
+        android:src="@drawable/babyandtemp"
+        android:layout_alignBottom="@+id/momTouchImageView"
+        android:layout_alignStart="@+id/imageView11" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/momTouchImageView"
+        android:src="@drawable/momandtemp"
+        android:layout_alignTop="@+id/progressBar2"
+        android:layout_toEndOf="@+id/clock" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32.32"
+        android:id="@+id/babyTempTV"
+        android:layout_alignBottom="@+id/progressBar2"
+        android:layout_alignEnd="@+id/babyTouchImageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32.32"
+        android:id="@+id/momTemperatureTV"
+        android:layout_alignTop="@+id/babyTempTVdegC"
+        android:layout_toStartOf="@+id/babyTempTVdegC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Angle"
+        android:id="@+id/tiltAngle"
+        android:layout_above="@+id/momTouchImageView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="sensorBattery"
+        android:id="@+id/sensorBattery"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_alignBottom="@+id/momTemperatureTV"
+        android:layout_alignEnd="@+id/disconnectTV"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Wearable ID"
+        android:id="@+id/sensorName"
+        android:layout_alignTop="@+id/imageView11"
+        android:layout_toStartOf="@+id/sensorBattery"
+        android:layout_marginTop="6dp" />
+
+</RelativeLayout>
